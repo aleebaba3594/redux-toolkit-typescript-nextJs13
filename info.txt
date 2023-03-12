@@ -1,0 +1,28 @@
+make folder in app directory.
+1) redux folder (main container)
+2) store.ts
+3) provider.ts
+4) in redux folder make Features folder which contains all slices
+
+app>redux>Features>counter>counter.ts
+in main container means redux folder create a folder for slicemeans counterSlice etc
+
+
+in next 13 everything in app directory(every component) is treated as Serever Side Component by default
+
+redux toolkit will not work on servier side component we have to make it client side
+that why we can not wrap store with provider tag 
+we have to make provider seprate file means client side component and use it
+
+
+--> in store.ts,provider.ts,counterSLice.ts at at the top of files write "use client" to tell that its a client side component
+
+--> in main layout means root layout , import providers and wrap children with providers tag.
+
+--> main page.ts means root page, we also have to make it "use client" side component.
+
+imp--> in every component where we use redux we have to make it "client side" coz reux is not supported by server side.
+
+--> store k andr sab slices ko import krna hy or reducer object k andr sab reducers(imported slices) ko rakh dena hy.
+
+
